@@ -1,6 +1,6 @@
 #!/bin/bash
 P_NS='domino-platform'
-C_NS=$( kubectl get ns -l domino-platform=true  |grep Active |tail -1 |awk '{print $1}')
+P_NS=$( kubectl get ns -l domino-platform=true  |grep Active |tail -1 |awk '{print $1}')
 
 C_NS='domino-compute'
 C_NS=$( kubectl get ns -l domino-compute=true  |grep Active |tail -1 |awk '{print $1}')
